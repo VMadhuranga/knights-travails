@@ -5,6 +5,12 @@
 import traverseBoard from "./traverse-board.js";
 import checkValidMoves from "./knight-moves.js";
 
+function displayShortestPath(path) {
+  console.log(`You made it in ${path.length - 1} moves! Here is your path:`);
+
+  path.forEach((move) => console.log(move));
+}
+
 function knightShortestPath(start, end) {
   const visitedPath = traverseBoard(start, end);
   const shortestPath = [];
@@ -27,13 +33,7 @@ function knightShortestPath(start, end) {
     }
   }
 
-  return shortestPath.reverse();
+  displayShortestPath(shortestPath.reverse());
 }
 
-console.log(
-  `You made it in ${
-    knightShortestPath([0, 0], [7, 7]).length
-  } moves! Here is your path:`,
-);
-
-console.log(...knightShortestPath([0, 0], [7, 7]));
+knightShortestPath([0, 0], [3, 3]);
