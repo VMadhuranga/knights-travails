@@ -9,6 +9,8 @@ This project intends to practice:
 
 ### Usage
 
+Warning: In order to run below commands you need to have installed Node.js on your PC
+
 - Fork and clone the repo
 - Inside local repo run `npm install`
 - To get shortest path add desired start and end positions to `knightShortestPath` function in the below of `knights-travails.js`.
